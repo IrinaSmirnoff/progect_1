@@ -12,6 +12,8 @@ let appData = {
     savings: false
 };
 
+//цикл for
+
 for (let i = 0; i < 2; i++) {
     let a = prompt('Введите обязательную статью расходов в этом месяце', '');
     let b = prompt('Во сколько обойдется?', '');
@@ -23,9 +25,45 @@ for (let i = 0; i < 2; i++) {
     }
 }
 
+
+//цикл while
+
+/*let i = 0;
+while (i < 2) {
+    let a = prompt('Введите обязательную статью расходов в этом месяце', '');
+    let b = prompt('Во сколько обойдется?', '');
+
+    if ( (typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null && a != '' && b != '' && a.length < 50) {
+        appData.expenses[a] = b;
+    } else {
+        i--;
+    }
+
+    i++;
+}
+*/
+
+
+//цикл do...while
+
+/*let i = 0;
+do {
+    let a = prompt('Введите обязательную статью расходов в этом месяце', '');
+    let b = prompt('Во сколько обойдется?', '');
+
+    if ( (typeof(a)) === 'string' && (typeof(a)) != null && (typeof(b)) != null && a != '' && b != '' && a.length < 50) {
+        appData.expenses[a] = b;
+    } else {
+        i--;
+    }
+
+    i++;
+} while (i < 2);
+*/
+
 appData.moneyPerDay = appData.budget / 30;
 
-alert('Ежедневный бюджет: ' + appData.moneyPerDay);
+alert('Ежедневный бюджет: ' + appData.moneyPerDay + ' руб.');
 
 if (appData.moneyPerDay < 100) {
     console.log('Минимальный уровень достатка');
@@ -36,3 +74,4 @@ if (appData.moneyPerDay < 100) {
 } else {
     console.log('Произошла ошибка');
 }
+
